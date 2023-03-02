@@ -9,7 +9,7 @@ app.use(function (req, res, next) {
   let day = date.getDay();
   let hour = date.getHours();
   console.log(date," ",day," ",hour)
-  if (day > 0 && day < 6 && hour > 0 && hour < 17) {
+  if (day > 0 && day < 6 && hour > 9 && hour < 17) {
     next();
   } else {
     res.send("The web application is only available during working hours (Monday to Friday,  from 9 to 17)");
